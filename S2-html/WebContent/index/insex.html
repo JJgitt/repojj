@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>html 标签分类</h1>
+
+<h3>1. 块级标签：占据一整行</h3>
+<h4>1)标题 h1~h6</h4>
+<h4>2)段落p</h4>
+<h4>3)列表ul(无序号列表)或ol(有序号列表) + li</h4>
+<ul id="edu_list"><!-- id是唯一标识 -->
+	<li>高中</li>
+	<li>专科</li>
+	<li>本科</li>
+</ul>
+<p>有序号对比</p>
+<ol type = "a">
+	<li>高中</li>
+	<li>专科</li>
+	<li>本科</li>
+</ol>
+<h4>4)介绍dl +dt + dd</h4>
+<dl>
+	<dt>数学</dt>
+	<dd>加减乘除</dd>
+</dl>
+<h4>5)表格 table + tr 行 + th列头 +td 数据+ thead + tbody</h4>
+<table border = "3px" width="50%">
+	<tr>
+	<th>学号</th><th>姓名</th><th>班级</th><th>性别</th>
+	</tr>
+	<tr>
+	<td>001</td><td>张三</td><td rowspan="3">计科1</td><td>男</td>
+	</tr>
+	<tr>
+	<td>002</td><td>李四</td><td>男</td>
+	</tr>
+	<tr>
+	<td>003</td><td>王五</td><td>男</td>
+	</tr>
+	<tr>
+	<td >总人数</td><td colspan = "3">3</td>
+	</tr>
+	</table>
+<h3>2.行级标签：是行内一块内容</h3>
+
+<h4>1)图片 img</h4>
+<ol>	
+	<li>图片的高度同时指定，可能会产生变形</li>
+	<li>图片引用网络资源,src可以写网络路径</li>
+	<li>图片引用本地资源，src根据路径编写()</li>
+	<img alt="无法加载图片" src="001.jpg" width="300px">
+	<img alt="无法加载图片" src="../images/a.jpg"width="200px">
+	<img alt="无法加载图片" src ="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1495774357,2006678240&fm=26&gp=0.jpg">
+</ol>	
+<h4>2)超链接--a</h4>
+<ol>
+	<li>超链接跳转定义在href ==》 html ref引用
+	<li>跳转到外站资源==》 淘宝，必须要以http开头
+	<li>跳转到本站资源，地址格式请参考img 的 src
+	<li>超链接可以实现页面内导航， 导航到锚点位置指定的id
+</ol>
+	<a href = "https://www.taobao.com/?spm=a2156.1676643.a2226mz.12.3196195akMdId5">淘宝网</a>
+	<br><!-- 注释 br是换行标签 -->
+	<a href="../pages/user/login.html">登录</a>
+	<hr><!-- 注释 hr分割线 -->
+	<a href="#edu_list">跳转到学历列表</a>
+<h4>3)表单标签 form input button select textarea</h4>
+<ol>
+	<li>action="定义表单提交的资源路径==》跳转的页面"
+	
+</ol>
+<form action="0102.html">
+	账号:	<input><br>
+	密码:	<input type="password"><br>
+	年龄:	<input type="number"><br>
+	邮箱:	<input type="email"><br>
+	爱好:	<input type="checkbox">篮球
+	    <input type="checkbox">跑步
+	    <input type="checkbox">音乐
+	    <input type="checkbox">电影<br>
+	学历:	<input name="edu" type="radio">初中
+		<input name="edu" type="radio">高中
+		<input name="edu" type="radio">大学
+		<input name="edu" type="radio">硕士
+		<br>
+
+	籍贯:<select>
+		<option>湖南</option>
+		<option>广西</option>
+		<option>广东</option>
+		<option>上海</option>
+	</select><br>
+	自我介绍:<textarea rows="10" cols="30"></textarea><br>
+	
+	<input type="submit" value="submit提交按钮，点击将会跳转到form的action 属性指定的资源"><br>
+	<input type="button" value="普通按钮,不执行任何操作"><br>
+	<input type="reset"  value="reset重置按钮，重置表单中输入的内容"><br>
+	
+	<button>默认是submit提交按钮</button><br>
+	<button type="button">button普通按钮</button><br>
+	<button type="reset">reset重置按钮</buton><br>
+</form>
+</body>
+</html>
